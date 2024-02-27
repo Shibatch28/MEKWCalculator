@@ -1,9 +1,11 @@
-interface Props {
-    targetValue1: number;
-    targetValue2: number;
-    answer: number;
-}
+import React from 'react';
 
-export default function CalcButtons({targetValue1, targetValue2, answer} : Props) {
-    
-}
+const CalcButtons = ({ value, onClick }) => {
+  return (
+    <button onClick={() => onClick(value)} style={{ width: 75, height: 75, fontSize: '20px' }}>
+      {value}
+    </button>
+  );
+};
+
+export default CalcButtons;
